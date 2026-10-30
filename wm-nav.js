@@ -7,22 +7,19 @@
  * source. Self-contained: all rules scoped under #wm-nav.
  *
  * Usage:
- *   <script src="https://wesleymatos.dev/wm-nav.js" data-current="Skills"></script>
+ *   <script src="https://wesleymatosdev.github.io/wm-nav.js" data-current="Blog"></script>
  *
- * data-current (optional): "Home" | "Blog" | "Open Source" | "Skills" | "Demos"
+ * data-current (optional): "GitHub" | "Blog" | "Email"
  *   — gets aria-current="page" + accent highlight. Omit on the root site.
  */
 (function () {
   'use strict';
 
-  var ROOT = 'https://wesleymatos.dev';
+  var ROOT = 'https://wesleymatosdev.github.io';
 
   var LINKS = [
     { label: 'GitHub', href: 'https://github.com/wesleymatosdev', nav: 'GITHUB' },
-    { label: 'Blog', href: 'https://blog.wesleymatos.dev', nav: 'BLOG' },
-    { label: 'Open Source', href: 'https://oss.wesleymatos.dev', nav: 'OSS' },
-    { label: 'Skills', href: 'https://skills.wesleymatos.dev', nav: 'SKILLS' },
-    { label: 'Demos', href: 'https://demo.wesleymatos.dev', nav: 'DEMOS' },
+    { label: 'Blog', href: 'https://wesleymatosdev.github.io/blog/', nav: 'BLOG' },
     { label: 'Email', href: 'mailto:wesleymatosdev@gmail.com', nav: 'EMAIL' }
   ];
 
@@ -86,7 +83,7 @@
 
     var nav = document.createElement('nav');
     nav.id = 'wm-nav';
-    nav.setAttribute('aria-label', 'wesleymatos.dev sites');
+    nav.setAttribute('aria-label', 'Wesley Matos sites');
 
     var brand = document.createElement('a');
     brand.className = 'wm-brand';

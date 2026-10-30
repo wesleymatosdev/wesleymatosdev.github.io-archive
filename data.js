@@ -36,8 +36,8 @@ window.HIRE_DATA = {
       name: 'gbrain',
       kind: 'MEMORY OS',
       desc: 'Memory for AI systems with a longer horizon — facts keep their source, confidence, and links, instead of dissolving into one MEMORY.md file.',
-      link: 'https://demo.wesleymatos.dev/gbrain/',
-      linkLabel: 'demo.wesleymatos.dev/gbrain',
+      link: 'https://github.com/wesleymatosdev/gbrain',
+      linkLabel: 'github.com/wesleymatosdev/gbrain',
       tags: ['memory graph', 'recall', 'local-first']
     },
     {
@@ -180,8 +180,7 @@ window.HIRE_DATA = {
   links: {
     email: 'wesleymatosdev@gmail.com',
     github: 'https://github.com/wesleymatosdev',
-    blog: 'https://blog.wesleymatos.dev',
-    main: 'https://wesleymatos.dev',
-    skills: 'https://skills.wesleymatos.dev'
+    blog: 'https://wesleymatosdev.github.io/blog/',
+    main: 'https://wesleymatosdev.github.io/'
   }
 };
