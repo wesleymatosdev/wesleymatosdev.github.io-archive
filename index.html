@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Wesley Matos — senior full-stack engineer running an AI-agent fleet that ships software: multi-harness workers, adversarial review gates, upstream OSS contributions.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Wesley Matos — I ship software with a fleet">
+<meta property="og:description" content="Senior full-stack engineer running an AI-agent fleet that ships software — multi-harness workers, adversarial review gates, upstream OSS contributions.">
+<meta property="og:url" content="https://wesleymatos.dev/">
+<link rel="canonical" href="https://wesleymatos.dev/">
+<title>Wesley Matos — I ship software with a fleet</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+<canvas id="bg" aria-hidden="true"></canvas>
+
+<nav class="topnav" aria-label="Main">
+  <a class="brand" href="#" data-goto="0"><canvas aria-hidden="true"></canvas><span>WESLEY&nbsp;MATOS</span></a>
+  <span class="links">
+    <a href="https://github.com/wesleymatosdev" target="_blank" rel="noopener">GITHUB</a>
+    <a href="https://blog.wesleymatos.dev" target="_blank" rel="noopener">BLOG</a>
+    <a href="https://oss.wesleymatos.dev" target="_blank" rel="noopener">OSS</a>
+    <a href="https://skills.wesleymatos.dev" target="_blank" rel="noopener">SKILLS</a>
+    <a href="https://demo.wesleymatos.dev" target="_blank" rel="noopener">DEMOS</a>
+    <a href="mailto:wesleymatosdev@gmail.com">EMAIL</a>
+  </span>
+</nav>
+
+<main class="stage" id="stage">
+  <div class="track">
+
+    <!-- 01 · hero — the main page IS the game -->
+    <section class="beat beat--hero" data-title="START">
+      <div class="hero-grid">
+        <div>
+          <p class="eyebrow">Wesley Matos · software engineer</p>
+          <h1>I ship software<br><em>with a fleet.</em></h1>
+          <p class="lede">Senior full-stack engineer and tech lead. These days I run a fleet of AI
+          coding agents — multi-harness workers, adversarial review gates on every diff,
+          sub-millisecond wake. And when tangle-bugs slip past the gate? I fly the interceptor
+          myself. This site is one of its builds.</p>
+          <div class="actions">
+            <button class="btn8" type="button" data-goto="2">Meet the fleet <span class="arr">→</span></button>
+          </div>
+        </div>
+        <div class="cabinet" id="arcade">
+          <div class="cab-hud">
+            <span>SCORE <b id="arc-score">0000</b></span>
+            <span>BEST <b id="arc-best">0000</b></span>
+            <span>WAVE <b id="arc-wave">1</b></span>
+            <span class="cab-lives" id="arc-lives" aria-label="Ships left"><canvas aria-hidden="true"></canvas></span>
+            <button class="cab-snd" id="arc-snd" type="button" aria-pressed="false">SOUND: OFF</button>
+          </div>
+          <div class="cab-screen">
+            <canvas id="arc-canvas" width="320" height="180" tabindex="0"
+              aria-label="Arcade game: steer the interceptor with the arrow keys, fire with space, stop the tangle-bugs before they land — and watch for the mothership every fifth wave"></canvas>
+            <div class="cab-overlay" id="arc-overlay" aria-live="polite">
+              <div class="cab-card" data-screen="title">
+                <h3>Tangle-bugs <em>inbound.</em></h3>
+                <p class="cab-press"><span class="desktop-only">PRESS ENTER TO START</span><span class="mobile-only">TAP TO START</span></p>
+                <p class="cab-sub"><span class="desktop-only">←→ MOVE · SPACE FIRE · </span><span class="mobile-only">DRAG TO FLY · HOLD TO FIRE · </span>SOUND STAYS OFF UNTIL YOU FLIP THE SWITCH</p>
+              </div>
+              <div class="cab-card" data-screen="over" hidden>
+                <h3>Signal <em>lost.</em></h3>
+                <p class="cab-press">SCORE <b id="arc-final">0000</b> · BEST <b id="arc-final-best">0000</b></p>
+                <p class="cab-sub"><span class="desktop-only">ENTER TO RETRY</span><span class="mobile-only">TAP TO RETRY</span></p>
+              </div>
+              <div class="cab-card" data-screen="paused" hidden>
+                <h3>Paused.</h3>
+                <p class="cab-press"><span class="desktop-only">P · ENTER TO RESUME</span><span class="mobile-only">TAP TO RESUME</span></p>
+                <p class="cab-sub" id="arc-pause-note" hidden>SCROLLED AWAY — THE BUGS WAIT.</p>
+              </div>
+            </div>
+            <div class="cab-banner" id="arc-banner" aria-hidden="true"></div>
+          </div>
+          <p class="cab-hint desktop-only"><i>←→</i> MOVE · <i>SPACE</i> FIRE · <i>P</i> PAUSE · <i>M</i> SOUND</p>
+          <p class="cab-hint mobile-only">DRAG TO FLY · HOLD TO FIRE</p>
+        </div>
+      </div>
+      <div class="hero-meta">
+        <span><b>NOW</b> ORCHESTRATING AI AGENTS</span>
+        <span><b>MODE</b> SENIOR FULL-STACK · TECH LEAD</span>
+        <span class="mobile-only"><b>SWIPE</b> → TO EXPLORE</span>
+        <span class="desktop-only"><b>SCROLL</b> OR PRESS → TO EXPLORE</span>
+      </div>
+    </section>
+
+    <!-- 02 · experience -->
+    <section class="beat beat--experience" data-title="EXPERIENCE">
+      <div class="beat-head">
+        <p class="eyebrow">The arc</p>
+        <h2>Senior IC to <em>fleet orchestrator.</em></h2>
+        <p class="lede">Four years shipping in public. The constant: building systems that hold up.
+        The change: who writes the code.</p>
+      </div>
+      <div class="timeline">
+        <article class="era" data-icon="book">
+          <span class="era-years">2022</span>
+          <h3>Foundations</h3>
+          <p>Polyglot fundamentals in public — Java, Go, TypeScript, C.</p>
+          <p>Distributed systems by doing: Kafka consumers, WebRTC calls, REST APIs, blockchain internals.</p>
+        </article>
+        <article class="era" data-icon="wrench">
+          <span class="era-years">2023 – 2024</span>
+          <h3>Systems</h3>
+          <p>Rust and Go deep work — performance, WASM boundaries, sharp CLI tools.</p>
+          <p>Backend throughput contests (rinha de backend): measuring instead of guessing.</p>
+        </article>
+        <article class="era" data-icon="globe">
+          <span class="era-years">2025</span>
+          <h3>Product &amp; upstream</h3>
+          <p>Full-stack product work: an exam simulator, client sites, review tooling.</p>
+          <p>Ten upstream PRs merged across xcap, permitio/docs, zio-json and friends.</p>
+        </article>
+        <article class="era" data-icon="robot">
+          <span class="era-years">2026</span>
+          <h3>AI-fleet orchestrator</h3>
+          <p>Now a fleet of coding agents ships the backlog under my supervision.</p>
+          <p>Built the loop end to end — spawn, push-wake, adversarial review gates, watchdogs, archives.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- 03 · the fleet -->
+    <section class="beat beat--fleet" data-title="THE FLEET">
+      <div class="beat-head">
+        <p class="eyebrow">The system</p>
+        <h2>One coordinator.<br><em>Seven harnesses.</em></h2>
+        <p class="lede">Hermes coordinates ZCode, Codex, Claude and Ollama workers. Status files are
+        the durable record; the bus is notification only — push wake measured in microseconds,
+        with a loud fallback to polling.</p>
+      </div>
+      <figure class="fleet-scene" aria-label="Pixel-art command center: server racks with blinking lights, a wall screen showing fleet status, an operator console and two robot workers">
+        <canvas></canvas>
+      </figure>
+      <div class="subsystems">
+        <div class="plaque"><b>SPAWN</b><span>named tmux window per task, delivery verified</span></div>
+        <div class="plaque"><b>WAIT</b><span>push wake, sub-ms; falls back loud, never silent</span></div>
+        <div class="plaque"><b>REVIEW</b><span>an adversarial second agent rides every diff</span></div>
+        <div class="plaque"><b>STEER</b><span>durable one-line steering, mid-flight</span></div>
+        <div class="plaque"><b>ARCHIVE</b><span>scale-to-zero sweep, watchdog on dead pids</span></div>
+      </div>
+      <div class="ticker-wrap" aria-hidden="true">
+        <div class="ticker"></div>
+      </div>
+    </section>
+
+    <!-- 04 · proof of work -->
+    <section class="beat beat--proof beat--wide" data-title="SHIPPED">
+      <div class="beat-head">
+        <p class="eyebrow">Proof of work</p>
+        <h2>Nine things <em>you can open.</em></h2>
+        <p class="lede">Shipped and linked. The private fleet pieces are marked honestly —
+        no dead links, no vaporware.</p>
+      </div>
+      <div class="proof-row"></div>
+    </section>
+
+    <!-- 05 · numbers -->
+    <section class="beat beat--numbers" data-title="NUMBERS">
+      <div class="beat-head">
+        <p class="eyebrow">Numbers</p>
+        <h2>Measured, <em>not vibes.</em></h2>
+      </div>
+      <div class="numbers"></div>
+      <p class="grain-note">COUNTS FROM PUBLIC GITHUB + THE FLEET'S OWN README — EVERY CLAIM ABOVE LINKS OUT.</p>
+    </section>
+
+    <!-- 06 · now -->
+    <section class="beat beat--now" data-title="NOW">
+      <div class="beat-head">
+        <p class="eyebrow">Now</p>
+        <h2>What this week<br><em>looks like.</em></h2>
+        <p class="lede">Kept current on purpose — the same fleet that ships the site updates this page.</p>
+      </div>
+      <div class="now-grid"></div>
+    </section>
+
+    <!-- 07 · contact -->
+    <section class="beat beat--contact" data-title="CONTACT">
+      <div class="beat-head">
+        <p class="eyebrow">Contact</p>
+        <h2>Let's build<br><em>something real.</em></h2>
+        <p class="lede">Hiring for an AI-native team? I'll bring the fleet.</p>
+      </div>
+      <div class="contact-links">
+        <a class="btn8 primary" href="mailto:wesleymatosdev@gmail.com">Email me <span class="arr">→</span></a>
+        <a class="btn8" href="https://github.com/wesleymatosdev" target="_blank" rel="noopener">GitHub <span class="arr">↗</span></a>
+        <a class="btn8" href="https://blog.wesleymatos.dev" target="_blank" rel="noopener">Blog <span class="arr">↗</span></a>
+        <a class="btn8" href="https://skills.wesleymatos.dev" target="_blank" rel="noopener">Skills <span class="arr">↗</span></a>
+      </div>
+      <p class="contact-meta">
+        © 2026 WESLEY MATOS<br>
+        BUILT BY FLEET WORKER <b>hire-site</b> · ADVERSARIALLY REVIEWED · HUMANS SUPERVISED<br>
+        NO BUILD STEP · NO APP CDN · WORKS FROM FILE://
+      </p>
+    </section>
+
+  </div>
+</main>
+
+<div class="vignette" aria-hidden="true"></div>
+<div class="scanlines" aria-hidden="true"></div>
+
+<!-- Geo-based i18n: Portuguese eyebrow for Brazilian visitors (kept from the
+     previous homepage — Cloudflare /cdn-cgi/trace, proxied domain only). -->
+<script>
+(function () {
+  fetch('/cdn-cgi/trace').then(r => r.text()).then(text => {
+    const match = text.match(/^loc=(\w+)/m);
+    if (!match || match[1] !== 'BR') return;
+    const eyebrow = document.querySelector('.beat--hero .eyebrow');
+    if (eyebrow) eyebrow.textContent = 'Wesley Matos · engenheiro de software';
+  }).catch(() => {});
+})();
+</script>
+
+<!-- Cloudflare Web Analytics -->
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js'
+  data-cf-beacon='{"token": "090d7c760e304cab91624b55b08936ef"}'></script>
+<!-- End Cloudflare Web Analytics -->
+
+<div class="hud" aria-label="Journey progress">
+  <span class="level" aria-live="polite">01 / START</span>
+  <span class="segments"></span>
+  <span class="hint desktop-only"><i>←→</i> MOVE · CLICK A LEVEL TO JUMP</span>
+</div>
+
+<script src="data.js"></script>
+<script src="js/pixel.js"></script>
+<script src="js/main.js"></script>
+<script src="js/game.js"></script>
+</body>
+</html>
