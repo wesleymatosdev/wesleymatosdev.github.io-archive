@@ -3,230 +3,367 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Wesley Matos — senior full-stack engineer running an AI-agent fleet that ships software: multi-harness workers, adversarial review gates, upstream OSS contributions.">
+<meta name="description" content="I orchestrate AI agent teams that ship real software: 70+ merged upstream PRs, active Agent Orchestrator contributor, adversarial review gates on every diff.">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Wesley Matos — I ship software with a fleet">
-<meta property="og:description" content="Senior full-stack engineer running an AI-agent fleet that ships software — multi-harness workers, adversarial review gates, upstream OSS contributions.">
+<meta property="og:title" content="Wesley Matos — agent orchestration, shipped in public">
+<meta property="og:description" content="I orchestrate AI agent teams that ship real software: 70+ merged upstream PRs, active Agent Orchestrator contributor, adversarial review gates on every diff.">
 <meta property="og:url" content="https://wesleymatosdev.github.io/">
+<meta property="og:image" content="https://wesleymatosdev.github.io/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Wesley Matos — agent orchestration, shipped in public. 70+ upstream PRs · 23 merged on the AO fork.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Wesley Matos — agent orchestration, shipped in public">
+<meta name="twitter:description" content="I orchestrate AI agent teams that ship real software: 70+ merged upstream PRs, active Agent Orchestrator contributor, adversarial review gates on every diff.">
+<meta name="twitter:image" content="https://wesleymatosdev.github.io/og-image.png">
 <link rel="canonical" href="https://wesleymatosdev.github.io/">
-<title>Wesley Matos — I ship software with a fleet</title>
+<title>Wesley Matos — agent orchestration, shipped in public</title>
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap">
 <link rel="stylesheet" href="css/site.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do agents write all the code?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No. Agents draft; I supervise and review every diff through an adversarial pre-ship gate. Upstream maintainers have merged 70+ of my PRs — agent-assisted, human-accountable." }
+    },
+    {
+      "@type": "Question",
+      "name": "What does agent orchestration actually mean?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Running many agent sessions as one system: spawn, supervise, steer, review, recover — in AO, with a human on the hook for everything that merges." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I see the work?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Everything linked is public: upstream PR lists, gbrain, the oss-site catalog. Private pieces are marked honestly, never dead-linked." }
+    },
+    {
+      "@type": "Question",
+      "name": "What kind of team is this for?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Teams building AI-native products or developer tooling that want shipping speed without giving up review rigor." }
+    },
+    {
+      "@type": "Question",
+      "name": "How do you prefer to be reached?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Email, one click from every page. Issues and PRs on my repos reach me too." }
+    },
+    {
+      "@type": "Question",
+      "name": "Was this site built by agents?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes — built and adversarially reviewed through the current AO pipeline. No build step, static by design, works from file://." }
+    }
+  ]
+}
+</script>
 </head>
 <body>
-<canvas id="bg" aria-hidden="true"></canvas>
+<a class="skip-link button-md" href="#main">Skip to content</a>
 
-<nav class="topnav" aria-label="Main">
-  <a class="brand" href="#" data-goto="0"><canvas aria-hidden="true"></canvas><span>WESLEY&nbsp;MATOS</span></a>
-  <span class="links">
-    <a href="https://github.com/wesleymatosdev" target="_blank" rel="noopener">GITHUB</a>
-    <a href="https://wesleymatosdev.github.io/blog/" target="_blank" rel="noopener">BLOG</a>
-    <a href="mailto:wesleymatosdev@gmail.com">EMAIL</a>
+<!-- Phosphor icons (regular), inlined so the page works offline from file:// -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+  <symbol id="i-binoculars" viewBox="0 0 256 256" fill="currentColor"><path d="M237.2,151.87v0a47.1,47.1,0,0,0-2.35-5.45L193.26,51.8a7.82,7.82,0,0,0-1.66-2.44,32,32,0,0,0-45.26,0A8,8,0,0,0,144,55V80H112V55a8,8,0,0,0-2.34-5.66,32,32,0,0,0-45.26,0,7.82,7.82,0,0,0-1.66,2.44L21.15,146.4a47.1,47.1,0,0,0-2.35,5.45v0A48,48,0,1,0,112,168V96h32v72a48,48,0,1,0,93.2-16.13ZM76.71,59.75a16,16,0,0,1,19.29-1v73.51a47.9,47.9,0,0,0-46.79-9.92ZM64,200a32,32,0,1,1,32-32A32,32,0,0,1,64,200ZM160,58.74a16,16,0,0,1,19.29,1l27.5,62.58A47.9,47.9,0,0,0,160,132.25ZM192,200a32,32,0,1,1,32-32A32,32,0,0,1,192,200Z"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 256 256" fill="currentColor"><path d="M208,40H48A16,16,0,0,0,32,56v56c0,52.72,25.52,84.67,46.93,102.19,23.06,18.86,46,25.26,47,25.53a8,8,0,0,0,4.2,0c1-.27,23.91-6.67,47-25.53C198.48,196.67,224,164.72,224,112V56A16,16,0,0,0,208,40Zm0,72c0,37.07-13.66,67.16-40.6,89.42A129.3,129.3,0,0,1,128,223.62a128.25,128.25,0,0,1-38.92-21.81C61.82,179.51,48,149.3,48,112l0-56,160,0ZM82.34,141.66a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32l-56,56a8,8,0,0,1-11.32,0Z"/></symbol>
+  <symbol id="i-brain" viewBox="0 0 256 256" fill="currentColor"><path d="M248,124a56.11,56.11,0,0,0-32-50.61V72a48,48,0,0,0-88-26.49A48,48,0,0,0,40,72v1.39a56,56,0,0,0,0,101.2V176a48,48,0,0,0,88,26.49A48,48,0,0,0,216,176v-1.41A56.09,56.09,0,0,0,248,124ZM88,208a32,32,0,0,1-31.81-28.56A55.87,55.87,0,0,0,64,180h8a8,8,0,0,0,0-16H64A40,40,0,0,1,50.67,86.27,8,8,0,0,0,56,78.73V72a32,32,0,0,1,64,0v68.26A47.8,47.8,0,0,0,88,128a8,8,0,0,0,0,16,32,32,0,0,1,0,64Zm104-44h-8a8,8,0,0,0,0,16h8a55.87,55.87,0,0,0,7.81-.56A32,32,0,1,1,168,144a8,8,0,0,0,0-16,47.8,47.8,0,0,0-32,12.26V72a32,32,0,0,1,64,0v6.73a8,8,0,0,0,5.33,7.54A40,40,0,0,1,192,164Zm16-52a8,8,0,0,1-8,8h-4a36,36,0,0,1-36-36V80a8,8,0,0,1,16,0v4a20,20,0,0,0,20,20h4A8,8,0,0,1,208,112ZM60,120H56a8,8,0,0,1,0-16h4A20,20,0,0,0,80,84V80a8,8,0,0,1,16,0v4A36,36,0,0,1,60,120Z"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 256 256" fill="currentColor"><path d="M136,80v43.47l36.12,21.67a8,8,0,0,1-8.24,13.72l-40-24A8,8,0,0,1,120,128V80a8,8,0,0,1,16,0Zm-8-48A95.44,95.44,0,0,0,60.08,60.15C52.81,67.51,46.35,74.59,40,82V64a8,8,0,0,0-16,0v40a8,8,0,0,0,8,8H72a8,8,0,0,0,0-16H49c7.15-8.42,14.27-16.35,22.39-24.57a80,80,0,1,1,1.66,114.75,8,8,0,1,0-11,11.64A96,96,0,1,0,128,32Z"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 256 256" fill="currentColor"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 256 256" fill="currentColor"><path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48ZM203.43,64,128,133.15,52.57,64ZM216,192H40V74.19l82.59,75.71a8,8,0,0,0,10.82,0L216,74.19V192Z"/></symbol>
+</svg>
+
+<nav class="nav" aria-label="Main">
+  <a class="nav-brand caption-3" href="#top" aria-current="page">WESLEY MATOS</a>
+  <span class="nav-links">
+    <a class="nav-link caption-4" href="https://github.com/wesleymatosdev" target="_blank" rel="noopener">GitHub</a>
+    <a class="nav-link caption-4" href="https://wesleymatosdev.github.io/blog/" target="_blank" rel="noopener">Blog</a>
   </span>
+  <a class="nav-cta button-sm" href="mailto:wesleymatosdev@gmail.com">Email me</a>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Open menu">
+    <span></span>
+    <span></span>
+  </button>
 </nav>
 
-<main class="stage" id="stage">
-  <div class="track">
-
-    <!-- 01 · hero — the main page IS the game -->
-    <section class="beat beat--hero" data-title="START">
-      <div class="hero-grid">
-        <div>
-          <p class="eyebrow">Wesley Matos · software engineer</p>
-          <h1>I ship software<br><em>with a fleet.</em></h1>
-          <p class="lede">Senior full-stack engineer and tech lead. These days I run a fleet of AI
-          coding agents — multi-harness workers, adversarial review gates on every diff,
-          sub-millisecond wake. And when tangle-bugs slip past the gate? I fly the interceptor
-          myself. This site is one of its builds.</p>
-          <div class="actions">
-            <button class="btn8" type="button" data-goto="2">Meet the fleet <span class="arr">→</span></button>
-          </div>
-        </div>
-        <div class="cabinet" id="arcade">
-          <div class="cab-hud">
-            <span>SCORE <b id="arc-score">0000</b></span>
-            <span>BEST <b id="arc-best">0000</b></span>
-            <span>WAVE <b id="arc-wave">1</b></span>
-            <span class="cab-lives" id="arc-lives" aria-label="Ships left"><canvas aria-hidden="true"></canvas></span>
-            <button class="cab-snd" id="arc-snd" type="button" aria-pressed="false">SOUND: OFF</button>
-          </div>
-          <div class="cab-screen">
-            <canvas id="arc-canvas" width="320" height="180" tabindex="0"
-              aria-label="Arcade game: steer the interceptor with the arrow keys, fire with space, stop the tangle-bugs before they land — and watch for the mothership every fifth wave"></canvas>
-            <div class="cab-overlay" id="arc-overlay" aria-live="polite">
-              <div class="cab-card" data-screen="title">
-                <h3>Tangle-bugs <em>inbound.</em></h3>
-                <p class="cab-press"><span class="desktop-only">PRESS ENTER TO START</span><span class="mobile-only">TAP TO START</span></p>
-                <p class="cab-sub"><span class="desktop-only">←→ MOVE · SPACE FIRE · </span><span class="mobile-only">DRAG TO FLY · HOLD TO FIRE · </span>SOUND STAYS OFF UNTIL YOU FLIP THE SWITCH</p>
-              </div>
-              <div class="cab-card" data-screen="over" hidden>
-                <h3>Signal <em>lost.</em></h3>
-                <p class="cab-press">SCORE <b id="arc-final">0000</b> · BEST <b id="arc-final-best">0000</b></p>
-                <p class="cab-sub"><span class="desktop-only">ENTER TO RETRY</span><span class="mobile-only">TAP TO RETRY</span></p>
-              </div>
-              <div class="cab-card" data-screen="paused" hidden>
-                <h3>Paused.</h3>
-                <p class="cab-press"><span class="desktop-only">P · ENTER TO RESUME</span><span class="mobile-only">TAP TO RESUME</span></p>
-                <p class="cab-sub" id="arc-pause-note" hidden>SCROLLED AWAY — THE BUGS WAIT.</p>
-              </div>
-            </div>
-            <div class="cab-banner" id="arc-banner" aria-hidden="true"></div>
-          </div>
-          <p class="cab-hint desktop-only"><i>←→</i> MOVE · <i>SPACE</i> FIRE · <i>P</i> PAUSE · <i>M</i> SOUND</p>
-          <p class="cab-hint mobile-only">DRAG TO FLY · HOLD TO FIRE</p>
-        </div>
-      </div>
-      <div class="hero-meta">
-        <span><b>NOW</b> ORCHESTRATING AI AGENTS</span>
-        <span><b>MODE</b> SENIOR FULL-STACK · TECH LEAD</span>
-        <span class="mobile-only"><b>SWIPE</b> → TO EXPLORE</span>
-        <span class="desktop-only"><b>SCROLL</b> OR PRESS → TO EXPLORE</span>
-      </div>
-    </section>
-
-    <!-- 02 · experience -->
-    <section class="beat beat--experience" data-title="EXPERIENCE">
-      <div class="beat-head">
-        <p class="eyebrow">The arc</p>
-        <h2>Senior IC to <em>fleet orchestrator.</em></h2>
-        <p class="lede">Four years shipping in public. The constant: building systems that hold up.
-        The change: who writes the code.</p>
-      </div>
-      <div class="timeline">
-        <article class="era" data-icon="book">
-          <span class="era-years">2022</span>
-          <h3>Foundations</h3>
-          <p>Polyglot fundamentals in public — Java, Go, TypeScript, C.</p>
-          <p>Distributed systems by doing: Kafka consumers, WebRTC calls, REST APIs, blockchain internals.</p>
-        </article>
-        <article class="era" data-icon="wrench">
-          <span class="era-years">2023 – 2024</span>
-          <h3>Systems</h3>
-          <p>Rust and Go deep work — performance, WASM boundaries, sharp CLI tools.</p>
-          <p>Backend throughput contests (rinha de backend): measuring instead of guessing.</p>
-        </article>
-        <article class="era" data-icon="globe">
-          <span class="era-years">2025</span>
-          <h3>Product &amp; upstream</h3>
-          <p>Full-stack product work: an exam simulator, client sites, review tooling.</p>
-          <p>Ten upstream PRs merged across xcap, permitio/docs, zio-json and friends.</p>
-        </article>
-        <article class="era" data-icon="robot">
-          <span class="era-years">2026</span>
-          <h3>AI-fleet orchestrator</h3>
-          <p>Now a fleet of coding agents ships the backlog under my supervision.</p>
-          <p>Built the loop end to end — spawn, push-wake, adversarial review gates, watchdogs, archives.</p>
-        </article>
-      </div>
-    </section>
-
-    <!-- 03 · the fleet -->
-    <section class="beat beat--fleet" data-title="THE FLEET">
-      <div class="beat-head">
-        <p class="eyebrow">The system</p>
-        <h2>One coordinator.<br><em>Seven harnesses.</em></h2>
-        <p class="lede">Hermes coordinates ZCode, Codex, Claude and Ollama workers. Status files are
-        the durable record; the bus is notification only — push wake measured in microseconds,
-        with a loud fallback to polling.</p>
-      </div>
-      <figure class="fleet-scene" aria-label="Pixel-art command center: server racks with blinking lights, a wall screen showing fleet status, an operator console and two robot workers">
-        <canvas></canvas>
-      </figure>
-      <div class="subsystems">
-        <div class="plaque"><b>SPAWN</b><span>named tmux window per task, delivery verified</span></div>
-        <div class="plaque"><b>WAIT</b><span>push wake, sub-ms; falls back loud, never silent</span></div>
-        <div class="plaque"><b>REVIEW</b><span>an adversarial second agent rides every diff</span></div>
-        <div class="plaque"><b>STEER</b><span>durable one-line steering, mid-flight</span></div>
-        <div class="plaque"><b>ARCHIVE</b><span>scale-to-zero sweep, watchdog on dead pids</span></div>
-      </div>
-      <div class="ticker-wrap" aria-hidden="true">
-        <div class="ticker"></div>
-      </div>
-    </section>
-
-    <!-- 04 · proof of work -->
-    <section class="beat beat--proof beat--wide" data-title="SHIPPED">
-      <div class="beat-head">
-        <p class="eyebrow">Proof of work</p>
-        <h2>Nine things <em>you can open.</em></h2>
-        <p class="lede">Shipped and linked. The private fleet pieces are marked honestly —
-        no dead links, no vaporware.</p>
-      </div>
-      <div class="proof-row"></div>
-    </section>
-
-    <!-- 05 · numbers -->
-    <section class="beat beat--numbers" data-title="NUMBERS">
-      <div class="beat-head">
-        <p class="eyebrow">Numbers</p>
-        <h2>Measured, <em>not vibes.</em></h2>
-      </div>
-      <div class="numbers"></div>
-      <p class="grain-note">COUNTS FROM PUBLIC GITHUB + THE FLEET'S OWN README — EVERY CLAIM ABOVE LINKS OUT.</p>
-    </section>
-
-    <!-- 06 · now -->
-    <section class="beat beat--now" data-title="NOW">
-      <div class="beat-head">
-        <p class="eyebrow">Now</p>
-        <h2>What this week<br><em>looks like.</em></h2>
-        <p class="lede">Kept current on purpose — the same fleet that ships the site updates this page.</p>
-      </div>
-      <div class="now-grid"></div>
-    </section>
-
-    <!-- 07 · contact -->
-    <section class="beat beat--contact" data-title="CONTACT">
-      <div class="beat-head">
-        <p class="eyebrow">Contact</p>
-        <h2>Let's build<br><em>something real.</em></h2>
-        <p class="lede">Hiring for an AI-native team? I'll bring the fleet.</p>
-      </div>
-      <div class="contact-links">
-        <a class="btn8 primary" href="mailto:wesleymatosdev@gmail.com">Email me <span class="arr">→</span></a>
-        <a class="btn8" href="https://github.com/wesleymatosdev" target="_blank" rel="noopener">GitHub <span class="arr">↗</span></a>
-        <a class="btn8" href="https://wesleymatosdev.github.io/blog/" target="_blank" rel="noopener">Blog <span class="arr">↗</span></a>
-      </div>
-      <p class="contact-meta">
-        © 2026 WESLEY MATOS<br>
-        BUILT BY FLEET WORKER <b>hire-site</b> · ADVERSARIALLY REVIEWED · HUMANS SUPERVISED<br>
-        NO BUILD STEP · NO APP CDN · WORKS FROM FILE://
-      </p>
-    </section>
-
-  </div>
-</main>
-
-<div class="vignette" aria-hidden="true"></div>
-<div class="scanlines" aria-hidden="true"></div>
-
-<!-- Geo-based i18n: Portuguese eyebrow for Brazilian visitors (kept from the
-     previous homepage — Cloudflare /cdn-cgi/trace, proxied domain only). -->
-<script>
-(function () {
-  fetch('/cdn-cgi/trace').then(r => r.text()).then(text => {
-    const match = text.match(/^loc=(\w+)/m);
-    if (!match || match[1] !== 'BR') return;
-    const eyebrow = document.querySelector('.beat--hero .eyebrow');
-    if (eyebrow) eyebrow.textContent = 'Wesley Matos · engenheiro de software';
-  }).catch(() => {});
-})();
-</script>
-
-<!-- Cloudflare Web Analytics -->
-<script defer src='https://static.cloudflareinsights.com/beacon.min.js'
-  data-cf-beacon='{"token": "090d7c760e304cab91624b55b08936ef"}'></script>
-<!-- End Cloudflare Web Analytics -->
-
-<div class="hud" aria-label="Journey progress">
-  <span class="level" aria-live="polite">01 / START</span>
-  <span class="segments"></span>
-  <span class="hint desktop-only"><i>←→</i> MOVE · CLICK A LEVEL TO JUMP</span>
+<div class="menu" id="menu">
+  <a class="menu-link" href="#work">Work</a>
+  <a class="menu-link" href="#how">How I work</a>
+  <a class="menu-link" href="#now">Now</a>
+  <a class="menu-link" href="#timeline">Timeline</a>
+  <a class="menu-link" href="#faq">FAQ</a>
+  <a class="menu-link" href="#contact">Contact</a>
+  <a class="menu-meta button-md" href="https://github.com/wesleymatosdev" target="_blank" rel="noopener">GitHub</a>
+  <a class="menu-meta button-md" href="https://wesleymatosdev.github.io/blog/" target="_blank" rel="noopener">Blog</a>
 </div>
 
-<script src="data.js"></script>
-<script src="js/pixel.js"></script>
+<main id="main">
+
+  <!-- Hero -->
+  <section class="hero" id="top">
+    <div class="container">
+      <p class="eyebrow caption-3">NOW ORCHESTRATING AI AGENTS</p>
+      <h1 class="heading-1 measure">I orchestrate<br>agent teams that<br>ship real software.</h1>
+      <p class="hero-sub body-3 measure">Four years shipping in public — 70+ merged upstream PRs, active Agent Orchestrator contributor, and an adversarial review gate on every diff.</p>
+      <div class="hero-actions">
+        <a class="btn-primary button-md" href="mailto:wesleymatosdev@gmail.com">Email me
+          <svg aria-hidden="true"><use href="#i-mail"/></svg>
+        </a>
+      </div>
+      <p class="hero-proof caption-4">70+ upstream PRs · 23 merged on the AO fork · in public since 2022</p>
+    </div>
+  </section>
+
+  <!-- Tagline reveal (B11) -->
+  <section class="tagline" aria-label="Measured, not vibes">
+    <div class="container">
+      <p class="tagline-text heading-3 measure">Measured, not vibes. Every number on this page links to its source.</p>
+    </div>
+  </section>
+
+  <!-- Proof strip -->
+  <section class="section reveal" aria-labelledby="proof-title">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow caption-3">PROOF</p>
+        <h2 class="section-title heading-3" id="proof-title">Numbers you can open.</h2>
+      </div>
+      <div class="proof-grid">
+        <a class="proof-item" href="https://github.com/search?q=author%3Awesleymatosdev+type%3Apr+is%3Amerged+-user%3Awesleymatosdev&type=pullrequests" target="_blank" rel="noopener">
+          <span class="proof-number heading-4">70+</span>
+          <span class="proof-label caption-4">upstream PRs merged</span>
+        </a>
+        <a class="proof-item" href="https://github.com/wesleymatosdev/agent-orchestrator/pulls?q=is%3Apr+author%3Awesleymatosdev" target="_blank" rel="noopener">
+          <span class="proof-number heading-4">23 merged</span>
+          <span class="proof-label caption-4">PRs on the Agent Orchestrator fork (+4 open)</span>
+        </a>
+        <a class="proof-item" href="https://github.com/wesleymatosdev/oss-site" target="_blank" rel="noopener">
+          <span class="proof-number heading-4">77</span>
+          <span class="proof-label caption-4">OSS projects cataloged (oss-site, 8 groups)</span>
+        </a>
+        <a class="proof-item" href="https://github.com/wesleymatosdev" target="_blank" rel="noopener">
+          <span class="proof-number heading-4">4+ years</span>
+          <span class="proof-label caption-4">shipping in public (since Feb 2022)</span>
+        </a>
+      </div>
+      <p class="proof-note caption-4">PUBLIC GITHUB API · OWN REPOS EXCLUDED · OCT 2026</p>
+    </div>
+  </section>
+
+  <!-- How I work -->
+  <section class="section reveal" id="how" aria-labelledby="how-title">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow caption-3">HOW I WORK</p>
+        <h2 class="section-title heading-3" id="how-title">Agents draft. I stay on the hook.</h2>
+      </div>
+      <div class="work-list">
+        <div class="work-item">
+          <svg aria-hidden="true"><use href="#i-binoculars"/></svg>
+          <p class="body-3"><strong class="body-1">Supervise, not spectate:</strong> agent sessions in AO — spawn, steer, review, recover CI when it breaks.</p>
+        </div>
+        <div class="work-item">
+          <svg aria-hidden="true"><use href="#i-shield"/></svg>
+          <p class="body-3"><strong class="body-1">Every diff passes no-mistakes,</strong> an adversarial pre-ship gate (private, runs locally — marked honestly).</p>
+        </div>
+        <div class="work-item">
+          <svg aria-hidden="true"><use href="#i-brain"/></svg>
+          <p class="body-3"><strong class="body-1">gbrain keeps the memory:</strong> facts with sources, confidence, linked recall.</p>
+        </div>
+        <div class="work-item">
+          <svg aria-hidden="true"><use href="#i-clock"/></svg>
+          <p class="body-3"><strong class="body-1">Before AO:</strong> a Hermes-coordinated agent fleet. The practice survived; the architecture moved on.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Selected work -->
+  <section class="section reveal" id="work" aria-labelledby="work-title">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow caption-3">SELECTED WORK</p>
+        <h2 class="section-title heading-3" id="work-title">Five things you can open.</h2>
+      </div>
+      <div class="card-stack">
+        <a class="card" href="https://github.com/wesleymatosdev/agent-orchestrator/pulls?q=is%3Apr+author%3Awesleymatosdev" target="_blank" rel="noopener">
+          <span class="card-top">
+            <span class="card-name title-1">Agent Orchestrator</span>
+            <span class="card-badge caption-3">FLAGSHIP</span>
+            <svg class="card-arrow" aria-hidden="true"><use href="#i-arrow"/></svg>
+          </span>
+          <span class="card-desc body-3">23 merged + 4 open PRs on my fork; upstreaming agent harnesses and chat integrations to OrchestratorInc/agent-orchestrator.</span>
+        </a>
+        <a class="card" href="https://github.com/wesleymatosdev/gbrain" target="_blank" rel="noopener">
+          <span class="card-top">
+            <span class="card-name title-1">gbrain</span>
+            <svg class="card-arrow" aria-hidden="true"><use href="#i-arrow"/></svg>
+          </span>
+          <span class="card-desc body-3">Memory OS: sourced facts, confidence, linked recall. In daily use.</span>
+        </a>
+        <a class="card" href="https://github.com/wesleymatosdev/oss-site" target="_blank" rel="noopener">
+          <span class="card-top">
+            <span class="card-name title-1">oss-site</span>
+            <svg class="card-arrow" aria-hidden="true"><use href="#i-arrow"/></svg>
+          </span>
+          <span class="card-desc body-3">A catalog of 77 open-source projects across 8 groups, regenerated by a deterministic script.</span>
+        </a>
+        <a class="card" href="https://github.com/nashaofu/xcap/pulls?q=is%3Apr+author%3Awesleymatosdev+is%3Amerged" target="_blank" rel="noopener">
+          <span class="card-top">
+            <span class="card-name title-1">xcap</span>
+            <svg class="card-arrow" aria-hidden="true"><use href="#i-arrow"/></svg>
+          </span>
+          <span class="card-desc body-3">3 merged upstream PRs (macOS focus APIs) in nashaofu/xcap, a Rust screen-capture library.</span>
+        </a>
+        <a class="card" href="https://github.com/NousResearch/hermes-agent/pulls?q=is%3Apr+author%3Awesleymatosdev+is%3Aopen" target="_blank" rel="noopener">
+          <span class="card-top">
+            <span class="card-name title-1">hermes-agent</span>
+            <svg class="card-arrow" aria-hidden="true"><use href="#i-arrow"/></svg>
+          </span>
+          <span class="card-desc body-3">Open upstream PRs on NousResearch/hermes-agent.</span>
+        </a>
+      </div>
+      <p class="also caption-4">ALSO: <a href="https://github.com/kingsword09/zcode-cli/pull/136" target="_blank" rel="noopener">zcode-cli PR #136 merged upstream</a> · <a href="https://github.com/zanfranceschi/rinha-de-backend-2025/pulls?q=is%3Apr+author%3Awesleymatosdev+is%3Amerged" target="_blank" rel="noopener">rinha de backend 2025 (3 PRs)</a> · no-mistakes gate (private)</p>
+    </div>
+  </section>
+
+  <!-- Now -->
+  <section class="section reveal" id="now" aria-labelledby="now-title">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow caption-3">NOW</p>
+        <h2 class="section-title heading-3" id="now-title">What October looks like.</h2>
+      </div>
+      <div class="now-list">
+        <div class="now-item">
+          <span class="now-tag caption-3">UPSTREAM</span>
+          <p class="body-3">Upstreaming Agent Orchestrator (<a href="https://github.com/wesleymatosdev/agent-orchestrator/pulls?q=is%3Apr+author%3Awesleymatosdev+is%3Amerged" target="_blank" rel="noopener">Hermes Agent harness + ZCode chat integration merged on the fork</a>; <a href="https://github.com/OrchestratorInc/agent-orchestrator/pulls?q=is%3Apr+author%3Awesleymatosdev+is%3Aopen" target="_blank" rel="noopener">open PRs into OrchestratorInc/agent-orchestrator</a>).</p>
+        </div>
+        <div class="now-item">
+          <span class="now-tag caption-3">OPEN</span>
+          <p class="body-3"><a href="https://github.com/NousResearch/hermes-agent/pulls?q=is%3Apr+author%3Awesleymatosdev+is%3Aopen" target="_blank" rel="noopener">Open PRs on NousResearch/hermes-agent</a>.</p>
+        </div>
+        <div class="now-item">
+          <span class="now-tag caption-3">DAILY</span>
+          <p class="body-3"><a href="https://github.com/wesleymatosdev/gbrain" target="_blank" rel="noopener">gbrain</a> in daily use.</p>
+        </div>
+        <div class="now-item">
+          <span class="now-tag caption-3">CATALOG</span>
+          <p class="body-3"><a href="https://github.com/wesleymatosdev/oss-site" target="_blank" rel="noopener">oss-site</a> catalog at 77 projects / 8 groups.</p>
+        </div>
+      </div>
+      <p class="now-stamp caption-4">AS OF OCTOBER 2026</p>
+    </div>
+  </section>
+
+  <!-- Timeline -->
+  <section class="section reveal" id="timeline" aria-labelledby="timeline-title">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow caption-3">TIMELINE</p>
+        <h2 class="section-title heading-3" id="timeline-title">Four years, one direction.</h2>
+      </div>
+      <div class="timeline">
+        <article class="era">
+          <span class="era-year caption-3">2022</span>
+          <div>
+            <h3 class="era-title title-1">Foundations</h3>
+            <p class="era-body body-3">Polyglot fundamentals in public (Java, Go, TypeScript, C); distributed systems by doing (Kafka, WebRTC, REST, blockchain internals).</p>
+          </div>
+        </article>
+        <article class="era">
+          <span class="era-year caption-3">2023–2024</span>
+          <div>
+            <h3 class="era-title title-1">Systems</h3>
+            <p class="era-body body-3">Rust and Go deep work (performance, WASM boundaries, sharp CLIs); rinha de backend throughput contests — measuring instead of guessing.</p>
+          </div>
+        </article>
+        <article class="era">
+          <span class="era-year caption-3">2025</span>
+          <div>
+            <h3 class="era-title title-1">Upstream</h3>
+            <p class="era-body body-3">70+ PRs merged across twenty-plus upstream projects: rust-lang/rustfmt, screenpipe, tailcall, xcap, permitio/docs, zio-json and friends.</p>
+          </div>
+        </article>
+        <article class="era">
+          <span class="era-year caption-3">2026</span>
+          <div>
+            <h3 class="era-title title-1">Orchestrator</h3>
+            <p class="era-body body-3">Senior full-stack → tech lead → agent orchestrator: supervising agent teams in AO and contributing the tooling upstream.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section reveal" id="faq" aria-labelledby="faq-title">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow caption-3">FAQ</p>
+        <h2 class="section-title heading-3" id="faq-title">Fair questions.</h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <h3 class="faq-q title-1">Do agents write all the code?</h3>
+          <p class="faq-a body-3">No. Agents draft; I supervise and review every diff through an adversarial pre-ship gate. Upstream maintainers have merged 70+ of my PRs — agent-assisted, human-accountable.</p>
+        </div>
+        <div class="faq-item">
+          <h3 class="faq-q title-1">What does agent orchestration actually mean?</h3>
+          <p class="faq-a body-3">Running many agent sessions as one system: spawn, supervise, steer, review, recover — in AO, with a human on the hook for everything that merges.</p>
+        </div>
+        <div class="faq-item">
+          <h3 class="faq-q title-1">Can I see the work?</h3>
+          <p class="faq-a body-3">Yes. Everything linked is public: upstream PR lists, gbrain, the oss-site catalog. Private pieces are marked honestly, never dead-linked.</p>
+        </div>
+        <div class="faq-item">
+          <h3 class="faq-q title-1">What kind of team is this for?</h3>
+          <p class="faq-a body-3">Teams building AI-native products or developer tooling that want shipping speed without giving up review rigor.</p>
+        </div>
+        <div class="faq-item">
+          <h3 class="faq-q title-1">How do you prefer to be reached?</h3>
+          <p class="faq-a body-3">Email, one click from every page. Issues and PRs on my repos reach me too.</p>
+        </div>
+        <div class="faq-item">
+          <h3 class="faq-q title-1">Was this site built by agents?</h3>
+          <p class="faq-a body-3">Yes — built and adversarially reviewed through the current AO pipeline. No build step, static by design, works from file://.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section contact reveal" id="contact" aria-labelledby="contact-title">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow caption-3">CONTACT</p>
+        <h2 class="section-title heading-3" id="contact-title">One click, straight to me.</h2>
+      </div>
+      <div class="contact-actions">
+        <a class="btn-primary button-md" href="mailto:wesleymatosdev@gmail.com">Email me
+          <svg aria-hidden="true"><use href="#i-mail"/></svg>
+        </a>
+        <a class="link-secondary button-md" href="https://github.com/wesleymatosdev" target="_blank" rel="noopener">GitHub
+          <svg aria-hidden="true"><use href="#i-arrow"/></svg>
+        </a>
+        <a class="link-secondary button-md" href="https://wesleymatosdev.github.io/blog/" target="_blank" rel="noopener">Blog
+          <svg aria-hidden="true"><use href="#i-arrow"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <p class="footer-meta caption-4">Built through the current AO pipeline · adversarially reviewed · no build step · works from file://</p>
+    <p class="footer-meta caption-4">© 2026 Wesley Matos</p>
+  </div>
+</footer>
+
 <script src="js/main.js"></script>
-<script src="js/game.js"></script>
 </body>
 </html>
